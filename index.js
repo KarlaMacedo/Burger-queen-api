@@ -15,9 +15,10 @@ app.set('pkg', pkg);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(authMiddleware(secret));
+
+// Configura las CORS para permitir solicitudes desde 'https://burger-queen-api-client-psi.vercel.app'
 app.use(cors({
-  // origin: ['https://burger-queen-api-wp1d-dev.fl0.io/', 'https://bq-api-client.vercel.app', 'https://bq-api-sara-rioseco.vercel.app/', 'http://localhost:8080'],
-  origin: '*',
+  origin: 'https://burger-queen-api-client-psi.vercel.app',
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
 }));
 
