@@ -18,7 +18,7 @@ app.use(authMiddleware(secret));
 
 // Configura las CORS para permitir solicitudes desde 'https://burger-queen-api-client-psi.vercel.app'
 app.use(cors({
-  origin: 'https://burger-queen-api-client-psi.vercel.app',
+  origin: ['https://burger-queen-api-client-psi.vercel.app', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
 }));
 
