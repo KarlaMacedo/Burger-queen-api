@@ -309,9 +309,9 @@ module.exports = (app, nextMain) => {
       const order = await Order.findOne({ _id: orderId });
 
       // Si usuario no es admin devolver error 403
-      if (!isAdmin(req)) {
-        return res.status(403).json({ error: 'No tienes autorización para eliminar esta orden' });
-      }
+      // if (!isAdmin(req)) {
+      //  return res.status(403).json({ error: 'No tienes autorización para eliminar esta orden' });
+      // }
 
       // Si no se encuentra orden, devolver un error 404
       if (!order) {
