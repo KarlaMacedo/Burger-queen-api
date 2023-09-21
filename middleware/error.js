@@ -1,7 +1,7 @@
 const httpErrors = {
   400: 'Bad request',
   401: 'Unauthorized',
-  403: 'Forbidden',
+  403: 'Forbiddenjajaja',
   404: 'Not found',
   500: 'Internal server error',
 };
