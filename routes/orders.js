@@ -323,12 +323,12 @@ module.exports = (app, nextMain) => {
       }
 
       // Eliminar orden de la db
-      await order.deleteOne({ _id: order._id });
+      await Order.deleteOne({ _id: orderId._id });
 
       // Devolver una respuesta exitosa
       return res.status(200).json({
         message: 'Orden eliminada exitosamente',
-        id: order._id,
+        id: orderId._id,
         userID: order.userId,
         client: order.client,
         table: order.table,
